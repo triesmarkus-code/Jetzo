@@ -11,7 +11,7 @@ Arbeitstitel: **Jetzo**. Lokale App für tagesaktuelle Angebote und spontane Akt
 Statt eines Kilometer-Radius arbeitet Jetzo mit zwei festen Ebenen:
 
 - **Stadt Bebra**: Die Standard-Ansicht beim Öffnen der App – tagesaktuelle Gastro-Deals, Shopping-Rabatte und spontane Treffs direkt vor Ort.
-- **Region Waldhessen**: Ein Umschalter erweitert die Ansicht auf die Region – sinnvoll für Mitfahrgelegenheiten, überregionale Events (HeuteLive) und Sportgruppen, die auch außerhalb der Stadtgrenze Teilnehmer suchen.
+- **Region Waldhessen**: Ein Umschalter erweitert die Ansicht auf die Region – sinnvoll für Mitfahrgelegenheiten, überregionale Events (JetzoLive) und Sportgruppen, die auch außerhalb der Stadtgrenze Teilnehmer suchen.
 
 Vorteil gegenüber einem Radius-Schieberegler: klarere Erwartung ("Das ist meine Stadt" vs. "Das ist meine Region"), einfacher zu kommunizieren an Partner und Nutzer, und die Ebenen lassen sich unabhängig von GPS-Genauigkeit pflegen.
 
@@ -37,19 +37,19 @@ Größtes Hindernis: Zeitmangel der Wirte. Devise: **„Wir nehmen dir die Arbei
 ## Roadmap in Phasen
 
 ### Phase 1 – Start: Gewerbliche Tages-Deals
-- 🍔 **HeuteDeals / HeuteEssen**: Tagesaktuelle Angebote (Mittagstisch, 2-für-1-Cocktails, Last-Minute-Tische)
-- 🛍️ **HeuteShoppen**: Spontane Rabatte im lokalen Einzelhandel (Mode, Deko, Elektronik)
+- 🍔 **JetzoDeals / JetzoEssen**: Tagesaktuelle Angebote (Mittagstisch, 2-für-1-Cocktails, Last-Minute-Tische)
+- 🛍️ **JetzoShoppen**: Spontane Rabatte im lokalen Einzelhandel (Mode, Deko, Elektronik)
 
 ### Phase 2 – Community-Erweiterung: Spontane Freizeit
-- 🏃 **HeuteSport / HeuteAktiv**: Lauf-/Freizeitpartner-Finder, Sportvereine melden spontane freie Plätze
-- ☕ **HeuteTreffen**: Rein soziale Kontakte, ideal für Neuzugezogene (spontaner Kaffee, Spieleabend)
+- 🏃 **JetzoSport / JetzoAktiv**: Lauf-/Freizeitpartner-Finder, Sportvereine melden spontane freie Plätze
+- ☕ **JetzoTreffen**: Rein soziale Kontakte, ideal für Neuzugezogene (spontaner Kaffee, Spieleabend)
 
 ### Phase 3 – Mobilität & Nützliches
-- 🚗 **HeuteMitfahren**: Ultraspontane Mitfahrzentrale für heute/morgen (Pendler, Event-Besucher)
-- 🤝 **HeuteHelfer**: Nachbarschaftshilfe in Echtzeit (z. B. Couch tragen, Baumarkt-Mitbringservice)
+- 🚗 **JetzoMitfahren**: Ultraspontane Mitfahrzentrale für heute/morgen (Pendler, Event-Besucher)
+- 🤝 **JetzoHelfer**: Nachbarschaftshilfe in Echtzeit (z. B. Couch tragen, Baumarkt-Mitbringservice)
 
 ### Phase 4 – Kultur & Entertainment
-- 🎉 **HeuteLive**: Resttickets/Kurzfristevents von Kinos, Live-Musik-Bars, Clubs
+- 🎉 **JetzoLive**: Resttickets/Kurzfristevents von Kinos, Live-Musik-Bars, Clubs
 
 ### Weitere Idee (unsortiert)
 - 🛏️ **Abends Zimmer günstiger**: Kurzfristige Übernachtungsangebote / Last-Minute-Zimmerrabatte (Anknüpfungspunkt zu Vermietung/Hotellerie)
