@@ -114,9 +114,8 @@
 
   .logo-mark {
     flex: 0 0 auto;
-    width: 2.4rem;
-    height: 2.4rem;
-    transform: rotate(-4deg);
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .logo-word {
@@ -523,11 +522,15 @@
   <div class="wrap">
     <div class="logo">
       <svg class="logo-mark" viewBox="0 0 44 44" role="img" aria-label="HeuteHier Logo">
-        <circle cx="22" cy="22" r="20.5" fill="none" stroke="var(--stub-bg)" stroke-width="1.2" />
-        <circle cx="22" cy="22" r="17.5" fill="var(--stub-bg)" />
-        <text x="22" y="29" text-anchor="middle"
-              font-family="Space Mono, monospace" font-weight="700"
-              font-size="16" letter-spacing="-0.5" fill="var(--stub-ink)">HH</text>
+        <circle cx="17" cy="26" r="12" fill="none" stroke="var(--hero-line)" stroke-width="1.3" />
+        <ellipse cx="17" cy="26" rx="5" ry="12" fill="none" stroke="var(--hero-line)" stroke-width="1.1" />
+        <line x1="5" y1="26" x2="29" y2="26" stroke="var(--hero-line)" stroke-width="1.1" />
+        <g transform="translate(13,0) scale(1.4)">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="var(--accent)" />
+        </g>
+        <text x="29.8" y="12.5" text-anchor="middle"
+              font-family="'Space Mono', ui-monospace, monospace" font-weight="700"
+              font-size="8.5" letter-spacing="-0.4" fill="var(--accent-ink)">HH</text>
       </svg>
       <span class="logo-word">HeuteHier <span class="place">Bebra</span></span>
     </div>
