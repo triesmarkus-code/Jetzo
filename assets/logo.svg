@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" role="img" aria-label="HeuteHier Logo">
+  <circle cx="22" cy="22" r="20.5" fill="none" stroke="#A83526" stroke-width="1.2" />
+  <circle cx="22" cy="22" r="17.5" fill="#A83526" />
+  <text x="22" y="29" text-anchor="middle"
+        font-family="'Space Mono', ui-monospace, monospace" font-weight="700"
+        font-size="16" letter-spacing="-0.5" fill="#FBEFE3">HH</text>
+</svg>

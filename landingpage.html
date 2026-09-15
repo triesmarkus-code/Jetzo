@@ -108,6 +108,19 @@
 
   .logo {
     display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .logo-mark {
+    flex: 0 0 auto;
+    width: 2.4rem;
+    height: 2.4rem;
+    transform: rotate(-4deg);
+  }
+
+  .logo-word {
+    display: flex;
     align-items: baseline;
     gap: 0.5rem;
     font-family: "Caveat", cursive;
@@ -508,7 +521,16 @@
 
 <div class="topbar">
   <div class="wrap">
-    <div class="logo">HeuteHier <span class="place">Bebra</span></div>
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 44 44" role="img" aria-label="HeuteHier Logo">
+        <circle cx="22" cy="22" r="20.5" fill="none" stroke="var(--stub-bg)" stroke-width="1.2" />
+        <circle cx="22" cy="22" r="17.5" fill="var(--stub-bg)" />
+        <text x="22" y="29" text-anchor="middle"
+              font-family="Space Mono, monospace" font-weight="700"
+              font-size="16" letter-spacing="-0.5" fill="var(--stub-ink)">HH</text>
+      </svg>
+      <span class="logo-word">HeuteHier <span class="place">Bebra</span></span>
+    </div>
   </div>
 </div>
 
