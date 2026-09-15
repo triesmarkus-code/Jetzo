@@ -282,6 +282,49 @@
     color: var(--ticket-ink-soft);
   }
 
+  .ticket-region {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .region-pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ticket-ink-soft);
+    background: #fff;
+    border: 1px solid var(--ticket-line);
+    border-radius: 999px;
+    padding: 0.42rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .region-pill input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .region-pill:has(input:checked) {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+  }
+
+  .region-pill:has(input:focus-visible) {
+    outline: 2px solid var(--stub-bg);
+    outline-offset: 2px;
+  }
+
   .ticket-row {
     display: flex;
     gap: 0.6rem;
@@ -570,7 +613,17 @@
       <div class="ticket-stub"><span>6 Monate gratis</span></div>
       <div class="ticket-main">
         <form class="ticket-form" id="signup-form">
-          <p class="ticket-title">Warteliste &middot; Start Bebra</p>
+          <p class="ticket-title">Warteliste &middot; Stadt &amp; Region</p>
+          <div class="ticket-region" role="radiogroup" aria-label="Deine Region">
+            <label class="region-pill">
+              <input type="radio" name="region" value="Stadt Bebra" checked>
+              Stadt Bebra
+            </label>
+            <label class="region-pill">
+              <input type="radio" name="region" value="Region Waldhessen">
+              Region Waldhessen
+            </label>
+          </div>
           <div class="ticket-row">
             <label for="email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
               Deine E-Mail-Adresse
@@ -582,7 +635,7 @@
         </form>
         <div class="success">
           <span class="stamp-mark">Notiert!</span>
-          <p class="fineprint">Wir melden uns, sobald es in Bebra losgeht.</p>
+          <p class="fineprint">Wir melden uns, sobald es in <span id="region-echo">Bebra</span> losgeht.</p>
         </div>
       </div>
     </div>
@@ -690,8 +743,13 @@
   (function () {
     var form = document.getElementById('signup-form');
     var ticket = document.getElementById('ticket');
+    var regionEcho = document.getElementById('region-echo');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      var region = form.querySelector('input[name="region"]:checked');
+      if (region && regionEcho) {
+        regionEcho.textContent = region.value === 'Region Waldhessen' ? 'der Region Waldhessen' : 'Bebra';
+      }
       ticket.classList.add('is-submitted');
     });
 
