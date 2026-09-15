@@ -1,10 +1,19 @@
 # Jetzo – Konzept
 
-Arbeitstitel: **Jetzo**. Lokale App für tagesaktuelle Angebote und spontane Aktivitäten, Start-Testmarkt Bebra.
+Arbeitstitel: **Jetzo**. Lokale App für tagesaktuelle Angebote und spontane Aktivitäten, Start-Testmarkt Stadt Bebra (Region Waldhessen).
 
 ## Grundidee
 
-„Was geht heute in Bebra?“ – Eine App, die tagesaktuelle Gastro-Deals, Shopping-Rabatte, spontane Freizeit-Treffs, Mitfahrgelegenheiten und Nachbarschaftshilfe an einem Ort bündelt, gefiltert nach Radius und Kategorie.
+„Was geht heute in Bebra?“ – Eine App, die tagesaktuelle Gastro-Deals, Shopping-Rabatte, spontane Freizeit-Treffs, Mitfahrgelegenheiten und Nachbarschaftshilfe an einem Ort bündelt, gefiltert nach Stadt/Region und Kategorie.
+
+## Geografisches Konzept: Stadt & Region
+
+Statt eines Kilometer-Radius arbeitet Jetzo mit zwei festen Ebenen:
+
+- **Stadt Bebra**: Die Standard-Ansicht beim Öffnen der App – tagesaktuelle Gastro-Deals, Shopping-Rabatte und spontane Treffs direkt vor Ort.
+- **Region Waldhessen**: Ein Umschalter erweitert die Ansicht auf die Region – sinnvoll für Mitfahrgelegenheiten, überregionale Events (HeuteLive) und Sportgruppen, die auch außerhalb der Stadtgrenze Teilnehmer suchen.
+
+Vorteil gegenüber einem Radius-Schieberegler: klarere Erwartung ("Das ist meine Stadt" vs. "Das ist meine Region"), einfacher zu kommunizieren an Partner und Nutzer, und die Ebenen lassen sich unabhängig von GPS-Genauigkeit pflegen.
 
 ## KI-Unterstützung für Wirte
 
@@ -17,7 +26,7 @@ Wirte laden ein Foto ihrer Kreidetafel/Tageskarte hoch (App oder WhatsApp an Ser
 - Push-Nachrichten + tägliche Angebote: 29 €/Monat
 - Hervorhebung „oben in der Liste“: 5–10 €
 
-## Go-to-Market: Erste 50 Partner (Raum Bebra)
+## Go-to-Market: Erste 50 Partner (Stadt Bebra, Region Waldhessen)
 
 Größtes Hindernis: Zeitmangel der Wirte. Devise: **„Wir nehmen dir die Arbeit komplett ab.“**
 
@@ -50,7 +59,7 @@ Größtes Hindernis: Zeitmangel der Wirte. Devise: **„Wir nehmen dir die Arbei
 Prinzip: **Erst filtern, dann entdecken.**
 
 - **Header**: Logo „Jetzo“ links, Profil-Icon + Herz-Icon (Favoriten) rechts. Darunter fixe Suchleiste: „Was suchst du heute? (z. B. Schnitzel, Joggen)“.
-- **Filter-Leiste**: Radius-Schieberegler (5 / 15 / 50 km), horizontal scrollbares Band mit runden Kategorie-Icons (🍔 Essen, 🏃 Sport, 🚗 Mitfahren, 🛍️ Shoppen) – Tippen filtert sofort.
+- **Filter-Leiste**: Umschalter **Stadt Bebra / Region Waldhessen** (statt Kilometer-Radius), darunter horizontal scrollbares Band mit runden Kategorie-Icons (🍔 Essen, 🏃 Sport, 🚗 Mitfahren, 🛍️ Shoppen) – Tippen filtert sofort.
 - **Feed / Hauptbereich**: Angebote als Karten mit großem Bild, fetter Überschrift (z. B. „Knuspriges XXL-Schnitzel für 12,- €“), Entfernungsangabe (z. B. „350 m entfernt“), Herz-Symbol oben rechts zum Speichern.
 
 ## Login & Favoriten
@@ -90,7 +99,7 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 
 ### Hero-Section
 - **Überschrift**: Was geht heute in Bebra? 🍔🏃
-- **Unterüberschrift**: Schluss mit langem Suchen. Jetzo zeigt dir tagesaktuelle Gastro-Deals, spontane Freizeit-Treffs und Mitfahrgelegenheiten in deiner direkten Umgebung. Genau jetzt.
+- **Unterüberschrift**: Schluss mit langem Suchen. Jetzo zeigt dir tagesaktuelle Gastro-Deals, spontane Freizeit-Treffs und Mitfahrgelegenheiten in Stadt Bebra und der Region Waldhessen. Genau jetzt.
 - **CTA**: E-Mail-Feld + Button „Ich will beim Start dabei sein! (Kostenlos)“
 
 ### Nutzen für Nutzer
@@ -110,7 +119,7 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 
 1. Landingpage erstellen (Baukasten, ca. 1–2 Std.)
 2. Link in lokalen Facebook-Gruppen teilen (z. B. „Bebraer Gerüchteküche“, Nachbarschafts-Gruppen)
-3. Ziel: 150–200 Eintragungen aus Bebra innerhalb von 2 Wochen → Signal für Marktpotenzial
+3. Ziel: 150–200 Eintragungen aus Stadt Bebra und Region Waldhessen innerhalb von 2 Wochen → Signal für Marktpotenzial
 
 ### Facebook-Post (Entwurf)
 
@@ -118,7 +127,7 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 >
 > Mal ehrlich: Wie oft habt ihr spontan Lust auf ein bestimmtes Essen (z. B. ein richtig gutes Schnitzel-Angebot) und wisst nicht, welcher Laden in der Nähe heute eine passende Aktion hat? Oder ihr wollt eine Runde joggen gehen, aber im Freundeskreis hat gerade niemand Zeit?
 >
-> Weil es dafür bisher keine einfache Lösung gibt, entwickle ich gerade eine App speziell für unsere Region: Jetzo! 📍
+> Weil es dafür bisher keine einfache Lösung gibt, entwickle ich gerade eine App speziell für Bebra und die Region Waldhessen: Jetzo! 📍
 >
 > Das Prinzip ist super simpel:
 > 1. App öffnen
