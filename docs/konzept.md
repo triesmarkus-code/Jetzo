@@ -1,10 +1,10 @@
 # HeuteHier – Konzept
 
-Arbeitstitel: **HeuteHier**. Lokale App für tagesaktuelle Angebote und spontane Aktivitäten, Start-Testmarkt Sontra.
+Arbeitstitel: **HeuteHier**. Lokale App für tagesaktuelle Angebote und spontane Aktivitäten, Start-Testmarkt Bebra.
 
 ## Grundidee
 
-„Was geht heute in Sontra?“ – Eine App, die tagesaktuelle Gastro-Deals, Shopping-Rabatte, spontane Freizeit-Treffs, Mitfahrgelegenheiten und Nachbarschaftshilfe an einem Ort bündelt, gefiltert nach Radius und Kategorie.
+„Was geht heute in Bebra?“ – Eine App, die tagesaktuelle Gastro-Deals, Shopping-Rabatte, spontane Freizeit-Treffs, Mitfahrgelegenheiten und Nachbarschaftshilfe an einem Ort bündelt, gefiltert nach Radius und Kategorie.
 
 ## KI-Unterstützung für Wirte
 
@@ -17,7 +17,7 @@ Wirte laden ein Foto ihrer Kreidetafel/Tageskarte hoch (App oder WhatsApp an Ser
 - Push-Nachrichten + tägliche Angebote: 29 €/Monat
 - Hervorhebung „oben in der Liste“: 5–10 €
 
-## Go-to-Market: Erste 50 Partner (Raum Sontra)
+## Go-to-Market: Erste 50 Partner (Raum Bebra)
 
 Größtes Hindernis: Zeitmangel der Wirte. Devise: **„Wir nehmen dir die Arbeit komplett ab.“**
 
@@ -89,7 +89,7 @@ Prinzip: so wenig Text wie möglich, so viele Auswahllisten wie möglich – Kri
 Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor die App gebaut wird.
 
 ### Hero-Section
-- **Überschrift**: Was geht heute in Sontra? 🍔🏃
+- **Überschrift**: Was geht heute in Bebra? 🍔🏃
 - **Unterüberschrift**: Schluss mit langem Suchen. HeuteHier zeigt dir tagesaktuelle Gastro-Deals, spontane Freizeit-Treffs und Mitfahrgelegenheiten in deiner direkten Umgebung. Genau jetzt.
 - **CTA**: E-Mail-Feld + Button „Ich will beim Start dabei sein! (Kostenlos)“
 
@@ -103,18 +103,18 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 - 👥 Neue Kunden aus der Region
 
 ### Footer
-- Hinweis: „Wir entwickeln HeuteHier gerade mit viel Herzblut für Sontra. Trage dich oben ein, und wir informieren dich exklusiv, sobald die App im App Store verfügbar ist. Kein Spam, versprochen!“
+- Hinweis: „Wir entwickeln HeuteHier gerade mit viel Herzblut für Bebra. Trage dich oben ein, und wir informieren dich exklusiv, sobald die App im App Store verfügbar ist. Kein Spam, versprochen!“
 - Links: Impressum | Datenschutz (DSGVO)
 
 ## Test-Strategie
 
 1. Landingpage erstellen (Baukasten, ca. 1–2 Std.)
-2. Link in lokalen Facebook-Gruppen teilen (z. B. „Sontraer Gerüchteküche“, Nachbarschafts-Gruppen)
-3. Ziel: 150–200 Eintragungen aus Sontra innerhalb von 2 Wochen → Signal für Marktpotenzial
+2. Link in lokalen Facebook-Gruppen teilen (z. B. „Bebraer Gerüchteküche“, Nachbarschafts-Gruppen)
+3. Ziel: 150–200 Eintragungen aus Bebra innerhalb von 2 Wochen → Signal für Marktpotenzial
 
 ### Facebook-Post (Entwurf)
 
-> **Hallo Sontra! Schnitzellust & Laufpartner-Suche? 🍔🏃**
+> **Hallo Bebra! Schnitzellust & Laufpartner-Suche? 🍔🏃**
 >
 > Mal ehrlich: Wie oft habt ihr spontan Lust auf ein bestimmtes Essen (z. B. ein richtig gutes Schnitzel-Angebot) und wisst nicht, welcher Laden in der Nähe heute eine passende Aktion hat? Oder ihr wollt eine Runde joggen gehen, aber im Freundeskreis hat gerade niemand Zeit?
 >
@@ -123,18 +123,18 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 > Das Prinzip ist super simpel:
 > 1. App öffnen
 > 2. Thema auswählen (z. B. Gastro-Deals, Sport, spontane Mitfahrgelegenheiten)
-> 3. Sofort sehen, was HEUTE in und um Sontra abgeht.
+> 3. Sofort sehen, was HEUTE in und um Bebra abgeht.
 >
 > Gastronomen und Händler können ihre Tageshits morgens einfach per Foto hochladen, und ihr seht es sofort auf dem Schirm.
 >
-> Die App ist aktuell in der Planung. Um zu sehen, ob sich die Entwicklung für Sontra lohnt, habe ich eine kleine Warteliste gestartet. Wenn ihr die Idee cool findet, tragt euch bitte komplett unverbindlich und kostenlos ein.
+> Die App ist aktuell in der Planung. Um zu sehen, ob sich die Entwicklung für Bebra lohnt, habe ich eine kleine Warteliste gestartet. Wenn ihr die Idee cool findet, tragt euch bitte komplett unverbindlich und kostenlos ein.
 >
 > Hier geht's zur Seite: 👇
 > [LANDINGPAGE-LINK]
 >
-> Teilt den Beitrag gerne mit Freunden aus der Region. Lasst uns Sontra gemeinsam digitaler und spontaner machen! 💪
+> Teilt den Beitrag gerne mit Freunden aus der Region. Lasst uns Bebra gemeinsam digitaler und spontaner machen! 💪
 
 ### Tipps für den Post
-- **Bild statt reiner Text**: appetitliches Schnitzel-Foto oder Bild vom Sontraer Stadtkern/Stadtsee (3x höhere Reichweite laut Facebook-Algorithmus)
+- **Bild statt reiner Text**: appetitliches Schnitzel-Foto oder Bild vom Bebraer Stadtkern/Stadtsee (3x höhere Reichweite laut Facebook-Algorithmus)
 - **Zeitpunkt**: sonntags 18–20 Uhr oder unter der Woche gegen 19:30 Uhr
 - **Aktiv in Kommentaren bleiben**: Jede Interaktion pusht den Beitrag im Algorithmus
