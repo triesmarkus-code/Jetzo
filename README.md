@@ -1,4 +1,4 @@
-# HeuteHier
+# Jetzo
 
 Arbeitstitel. Lokale App für tagesaktuelle Gastro-Deals, Shopping-Angebote und spontane Freizeit-Aktivitäten, Start-Testmarkt Bebra.
 

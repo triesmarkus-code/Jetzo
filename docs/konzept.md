@@ -1,6 +1,6 @@
-# HeuteHier – Konzept
+# Jetzo – Konzept
 
-Arbeitstitel: **HeuteHier**. Lokale App für tagesaktuelle Angebote und spontane Aktivitäten, Start-Testmarkt Bebra.
+Arbeitstitel: **Jetzo**. Lokale App für tagesaktuelle Angebote und spontane Aktivitäten, Start-Testmarkt Bebra.
 
 ## Grundidee
 
@@ -49,7 +49,7 @@ Größtes Hindernis: Zeitmangel der Wirte. Devise: **„Wir nehmen dir die Arbei
 
 Prinzip: **Erst filtern, dann entdecken.**
 
-- **Header**: Logo „HeuteHier“ links, Profil-Icon + Herz-Icon (Favoriten) rechts. Darunter fixe Suchleiste: „Was suchst du heute? (z. B. Schnitzel, Joggen)“.
+- **Header**: Logo „Jetzo“ links, Profil-Icon + Herz-Icon (Favoriten) rechts. Darunter fixe Suchleiste: „Was suchst du heute? (z. B. Schnitzel, Joggen)“.
 - **Filter-Leiste**: Radius-Schieberegler (5 / 15 / 50 km), horizontal scrollbares Band mit runden Kategorie-Icons (🍔 Essen, 🏃 Sport, 🚗 Mitfahren, 🛍️ Shoppen) – Tippen filtert sofort.
 - **Feed / Hauptbereich**: Angebote als Karten mit großem Bild, fetter Überschrift (z. B. „Knuspriges XXL-Schnitzel für 12,- €“), Entfernungsangabe (z. B. „350 m entfernt“), Herz-Symbol oben rechts zum Speichern.
 
@@ -63,7 +63,7 @@ Login ist langfristig zwingend, aber mit Einschränkung für den Start:
 
 ## Premium-Mitgliedschaft (Nutzer)
 
-„HeuteHier-Plus“ für 1,99 €/Monat: komplette Werbefreiheit, unbegrenzt private Aktivitäts-Inserate pro Woche, exklusive Gastro-Deals nur für Plus-Nutzer.
+„Jetzo-Plus“ für 1,99 €/Monat: komplette Werbefreiheit, unbegrenzt private Aktivitäts-Inserate pro Woche, exklusive Gastro-Deals nur für Plus-Nutzer.
 
 ## Eingabeformulare
 
@@ -72,7 +72,7 @@ Prinzip: so wenig Text wie möglich, so viele Auswahllisten wie möglich – Kri
 ### Formular Händler (Gastro & Shop) – < 30 Sekunden ausfüllbar
 - Titel des Angebots (Pflicht, Kurztext)
 - Kategorie (Pflicht, Auswahl): 🍔 Essen / 🍹 Trinken / 🛍️ Shopping
-- Preis (Pflicht): Normalpreis + Heute-Hier-Aktionspreis
+- Preis (Pflicht): Normalpreis + Jetzo-Aktionspreis
 - Gültigkeit: Standard „Nur heute“, optional Datum wählbar
 - Foto (optional, empfohlen): Upload, sonst automatisches Standard-Symbol
 - Standort & Name: automatisch aus dem Profil des Händlers
@@ -90,7 +90,7 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 
 ### Hero-Section
 - **Überschrift**: Was geht heute in Bebra? 🍔🏃
-- **Unterüberschrift**: Schluss mit langem Suchen. HeuteHier zeigt dir tagesaktuelle Gastro-Deals, spontane Freizeit-Treffs und Mitfahrgelegenheiten in deiner direkten Umgebung. Genau jetzt.
+- **Unterüberschrift**: Schluss mit langem Suchen. Jetzo zeigt dir tagesaktuelle Gastro-Deals, spontane Freizeit-Treffs und Mitfahrgelegenheiten in deiner direkten Umgebung. Genau jetzt.
 - **CTA**: E-Mail-Feld + Button „Ich will beim Start dabei sein! (Kostenlos)“
 
 ### Nutzen für Nutzer
@@ -103,7 +103,7 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 - 👥 Neue Kunden aus der Region
 
 ### Footer
-- Hinweis: „Wir entwickeln HeuteHier gerade mit viel Herzblut für Bebra. Trage dich oben ein, und wir informieren dich exklusiv, sobald die App im App Store verfügbar ist. Kein Spam, versprochen!“
+- Hinweis: „Wir entwickeln Jetzo gerade mit viel Herzblut für Bebra. Trage dich oben ein, und wir informieren dich exklusiv, sobald die App im App Store verfügbar ist. Kein Spam, versprochen!“
 - Links: Impressum | Datenschutz (DSGVO)
 
 ## Test-Strategie
@@ -118,7 +118,7 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 >
 > Mal ehrlich: Wie oft habt ihr spontan Lust auf ein bestimmtes Essen (z. B. ein richtig gutes Schnitzel-Angebot) und wisst nicht, welcher Laden in der Nähe heute eine passende Aktion hat? Oder ihr wollt eine Runde joggen gehen, aber im Freundeskreis hat gerade niemand Zeit?
 >
-> Weil es dafür bisher keine einfache Lösung gibt, entwickle ich gerade eine App speziell für unsere Region: HeuteHier! 📍
+> Weil es dafür bisher keine einfache Lösung gibt, entwickle ich gerade eine App speziell für unsere Region: Jetzo! 📍
 >
 > Das Prinzip ist super simpel:
 > 1. App öffnen
