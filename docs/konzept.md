@@ -15,6 +15,8 @@ Statt eines Kilometer-Radius arbeitet Jetzo mit zwei festen Ebenen:
 
 Vorteil gegenüber einem Radius-Schieberegler: klarere Erwartung ("Das ist meine Stadt" vs. "Das ist meine Region"), einfacher zu kommunizieren an Partner und Nutzer, und die Ebenen lassen sich unabhängig von GPS-Genauigkeit pflegen.
 
+**Städte in Region Waldhessen** (Landkreis Hersfeld-Rotenburg): Bad Hersfeld, **Bebra** (Pilot-Testmarkt), Rotenburg an der Fulda, Heringen (Werra). Die Warteliste auf der Landingpage erlaubt bereits die Anmeldung aus allen vier Städten – die Region wird dabei automatisch aus der gewählten Stadt abgeleitet. Der Wirte-Vertrieb (Gründungsmitglieder-Aktion) startet trotzdem zunächst konzentriert in Bebra.
+
 ## KI-Unterstützung für Wirte
 
 Wirte laden ein Foto ihrer Kreidetafel/Tageskarte hoch (App oder WhatsApp an Service-Nummer), die KI liest das Gericht aus und erstellt automatisch das digitale Angebot. Kein Formular-Tippen nötig – „Foto statt Tippen“.
