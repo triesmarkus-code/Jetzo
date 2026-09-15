@@ -72,6 +72,20 @@ Login ist langfristig zwingend, aber mit Einschränkung für den Start:
 - **Login bei Aktion**: Erst nötig, wenn der Nutzer aktiv wird – Favorit setzen, Gutschein reservieren, Kontakt aufnehmen/Aktivität erstellen.
 - **Mehrwert Favoriten**: Nutzer folgen Lieblingsbetrieben/-personen und erhalten Push-Benachrichtigung bei neuen Angeboten.
 
+## Business-Zugang für Partner
+
+Getrennt vom normalen Nutzer-Login gibt es einen eigenen **Business-Zugang** für Gastronomen, Händler und andere professionelle Anbieter – kein Konsumenten-Account, sondern ein Partner-Dashboard.
+
+- **Eigener Login-Bereich**: E-Mail + Passwort (oder Magic Link), führt direkt ins Partner-Dashboard statt in die normale Nutzer-Ansicht.
+- **Funktionen im Dashboard**:
+  - Angebote verwalten (anlegen, bearbeiten, löschen – inkl. „Foto-statt-Tippen“)
+  - Profil pflegen (Name, Adresse, Öffnungszeiten, Kategorie)
+  - Abo & Preisstufe einsehen (Anzahl Aktionen, Rechnung, Upgrade/Downgrade)
+  - Push-Kampagnen planen (für das 29-€-Paket)
+  - Reichweiten-Statistik (Ansichten, Speicherungen, Klicks) – **Phase 2**
+- **Einrichtung beim Onboarding**: Beim persönlichen Besuch (Gründungsmitglieder-Aktion) legt das Jetzo-Team den Business-Zugang direkt mit an – der Wirt bekommt nur noch Zugangsdaten, keine Selbstregistrierung nötig.
+- **Unabhängig vom Konsumenten-Login**: Ein Partner kann Jetzo zusätzlich privat als Nutzer verwenden, Business-Zugang und Nutzer-Account bleiben aber getrennte Logins.
+
 ## Premium-Mitgliedschaft (Nutzer)
 
 „Jetzo-Plus“ für 1,99 €/Monat: komplette Werbefreiheit, unbegrenzt private Aktivitäts-Inserate pro Woche, exklusive Gastro-Deals nur für Plus-Nutzer.

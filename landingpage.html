@@ -104,6 +104,31 @@
     align-items: center;
     justify-content: space-between;
     padding-block: 1.1rem;
+    gap: 1rem;
+  }
+
+  .business-link {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--hero-ink-soft);
+    border: 1px solid var(--hero-line);
+    border-radius: 999px;
+    padding: 0.45rem 0.85rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .business-link:hover {
+    border-color: var(--accent);
+    color: var(--hero-ink);
   }
 
   .logo {
@@ -534,6 +559,16 @@
 
   .founder-box strong { color: var(--ink); }
 
+  .business-box {
+    border-left-color: var(--accent);
+    margin-bottom: clamp(1.75rem, 4vw, 2.25rem);
+  }
+
+  .business-icon {
+    font-size: 1.5rem;
+    flex: 0 0 auto;
+  }
+
   /* ---------- Footer ---------- */
 
   footer.page {
@@ -603,6 +638,7 @@
       </svg>
       <span class="logo-word">Jetzo <span class="place">Bebra &middot; Waldhessen</span></span>
     </div>
+    <a class="business-link" href="#partner">&#128188; Business-Zugang</a>
   </div>
 </div>
 
@@ -691,7 +727,7 @@
   </div>
 </section>
 
-<section class="page partners">
+<section class="page partners" id="partner">
   <div class="wrap">
     <div class="section-head">
       <div>
@@ -707,6 +743,16 @@
         Die ersten <strong>50 Partner in Stadt Bebra und Region Waldhessen</strong> erhalten das Basis-Abo
         <strong>lebenslang kostenlos</strong> &ndash; und wir legen dein Profil beim
         persönlichen Onboarding-Besuch direkt für dich an.
+      </p>
+    </div>
+
+    <div class="founder-box business-box">
+      <span class="business-icon" aria-hidden="true">&#128188;</span>
+      <p>
+        Als Partner bekommst du einen eigenen <strong>Business-Zugang</strong> &ndash; ein
+        Dashboard getrennt von der normalen Nutzer-Ansicht, mit Angebots-Verwaltung, Profil,
+        Abo-Übersicht und Push-Kampagnen. Beim Onboarding-Besuch richten wir ihn direkt für dich
+        ein, du bekommst nur die Zugangsdaten.
       </p>
     </div>
 
