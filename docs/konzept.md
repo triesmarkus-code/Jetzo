@@ -135,6 +135,6 @@ Ziel: Validierung der Idee über eine einfache Landingpage + Warteliste, bevor d
 > Teilt den Beitrag gerne mit Freunden aus der Region. Lasst uns Bebra gemeinsam digitaler und spontaner machen! 💪
 
 ### Tipps für den Post
-- **Bild statt reiner Text**: appetitliches Schnitzel-Foto oder Bild vom Bebraer Stadtkern/Stadtsee (3x höhere Reichweite laut Facebook-Algorithmus)
+- **Bild statt reiner Text**: appetitliches Schnitzel-Foto oder Bild vom Bebraer Stadtkern/Breitenbacher See (3x höhere Reichweite laut Facebook-Algorithmus)
 - **Zeitpunkt**: sonntags 18–20 Uhr oder unter der Woche gegen 19:30 Uhr
 - **Aktiv in Kommentaren bleiben**: Jede Interaktion pusht den Beitrag im Algorithmus
