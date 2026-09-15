@@ -1,0 +1,659 @@
+<title>HeuteHier Bebra</title>
+<style>
+  :root {
+    --bg: #F6F1E6;
+    --surface: #FFFFFF;
+    --surface-alt: #EFE6CF;
+    --ink: #232C26;
+    --ink-soft: #5B6058;
+    --accent: #C97323;
+    --accent-strong: #A85A16;
+    --accent-ink: #201404;
+    --stamp: #A83526;
+    --stamp-ink: #FBEFE3;
+    --line: rgba(35, 44, 38, 0.16);
+    --shadow: 0 18px 40px -20px rgba(35, 44, 38, 0.35);
+
+    /* Fixed "paper on chalkboard" motif — stays constant across themes,
+       like a photograph, rather than swapping with the page palette. */
+    --hero-bg: #232C26;
+    --hero-bg-deep: #1A211C;
+    --hero-ink: #F5F0E3;
+    --hero-ink-soft: #C9CFC1;
+    --hero-line: rgba(245, 240, 227, 0.2);
+    --ticket-bg: #FBF6EA;
+    --ticket-ink: #232C26;
+    --ticket-ink-soft: #6B7166;
+    --ticket-line: rgba(35, 44, 38, 0.18);
+    --stub-bg: #A83526;
+    --stub-ink: #FBEFE3;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1E2420;
+      --surface: #262E27;
+      --surface-alt: #2B342C;
+      --ink: #F1ECDF;
+      --ink-soft: #A9AF9E;
+      --accent: #E8954A;
+      --accent-strong: #F2A968;
+      --accent-ink: #1B1006;
+      --stamp: #E2604A;
+      --stamp-ink: #241206;
+      --line: rgba(241, 236, 223, 0.14);
+      --shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1E2420;
+    --surface: #262E27;
+    --surface-alt: #2B342C;
+    --ink: #F1ECDF;
+    --ink-soft: #A9AF9E;
+    --accent: #E8954A;
+    --accent-strong: #F2A968;
+    --accent-ink: #1B1006;
+    --stamp: #E2604A;
+    --stamp-ink: #241206;
+    --line: rgba(241, 236, 223, 0.14);
+    --shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.6);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { text-wrap: balance; margin: 0; }
+
+  .chalk {
+    font-family: "Caveat", "Segoe Script", cursive;
+    font-weight: 700;
+    line-height: 0.95;
+  }
+
+  .mono {
+    font-family: "Space Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding-inline: clamp(1.25rem, 5vw, 3rem);
+  }
+
+  /* ---------- Topbar ---------- */
+
+  .topbar {
+    background: var(--hero-bg);
+    color: var(--hero-ink);
+  }
+
+  .topbar .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.1rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.01em;
+  }
+
+  .logo .place {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--hero-ink-soft);
+    border: 1px solid var(--hero-line);
+    border-radius: 999px;
+    padding: 0.2rem 0.55rem;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    position: relative;
+    background:
+      radial-gradient(60rem 30rem at 15% -10%, rgba(245, 240, 227, 0.05), transparent 60%),
+      radial-gradient(50rem 26rem at 100% 0%, rgba(232, 149, 74, 0.10), transparent 55%),
+      var(--hero-bg);
+    color: var(--hero-ink);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .hero::before {
+    /* chalk-dust grain */
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    background-image:
+      radial-gradient(rgba(245, 240, 227, 0.05) 1px, transparent 1.4px),
+      radial-gradient(rgba(245, 240, 227, 0.035) 1px, transparent 1.4px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 2px 3px;
+    mix-blend-mode: screen;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    padding-block: clamp(3.25rem, 9vw, 6rem) clamp(3.5rem, 9vw, 6.5rem);
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--hero-ink-soft);
+    border: 1px dashed var(--hero-line);
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem 0.4rem;
+  }
+
+  .eyebrow .dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--stamp);
+    box-shadow: 0 0 0 3px rgba(168, 53, 38, 0.25);
+  }
+
+  .headline {
+    font-size: clamp(3rem, 9vw, 5.6rem);
+    max-width: 16ch;
+  }
+
+  .headline .accent-word {
+    color: var(--accent-strong, var(--accent));
+  }
+
+  .lede {
+    max-width: 42ch;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--hero-ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ---------- Ticket / signup ---------- */
+
+  .ticket {
+    position: relative;
+    display: flex;
+    background: var(--ticket-bg);
+    color: var(--ticket-ink);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    max-width: 34rem;
+    overflow: hidden;
+    transform: rotate(-0.6deg);
+  }
+
+  .ticket-stub {
+    flex: 0 0 auto;
+    width: 3.4rem;
+    background: var(--stub-bg);
+    color: var(--stub-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ticket-stub span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+  }
+
+  .ticket-stub::before,
+  .ticket-stub::after {
+    content: "";
+    position: absolute;
+    right: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--hero-bg);
+  }
+
+  .ticket-stub::before { top: -0.5rem; }
+  .ticket-stub::after { bottom: -0.5rem; }
+
+  .ticket-main {
+    flex: 1 1 auto;
+    padding: 1.4rem 1.5rem 1.3rem;
+    border-left: 1px dashed var(--ticket-line);
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .ticket-title {
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ticket-ink-soft);
+  }
+
+  .ticket-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .ticket input[type="email"] {
+    flex: 1 1 12rem;
+    min-width: 0;
+    border: 1px solid var(--ticket-line);
+    background: #fff;
+    color: var(--ticket-ink);
+    border-radius: 0.6rem;
+    padding: 0.75rem 0.9rem;
+    font: inherit;
+    font-size: 0.98rem;
+  }
+
+  .ticket input[type="email"]::placeholder { color: #8A8F80; }
+
+  .ticket input[type="email"]:focus-visible,
+  .ticket button:focus-visible {
+    outline: 2px solid var(--stub-bg);
+    outline-offset: 2px;
+  }
+
+  .ticket button {
+    flex: 1 1 12rem;
+    border: none;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.98rem;
+    border-radius: 0.6rem;
+    padding: 0.75rem 1.1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+
+  .ticket button:hover { background: var(--accent-strong); transform: translateY(-1px); }
+  .ticket button:active { transform: translateY(0); }
+
+  .ticket .fineprint {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--ticket-ink-soft);
+  }
+
+  .ticket .success {
+    display: none;
+    align-items: baseline;
+    gap: 0.55rem;
+  }
+
+  .ticket.is-submitted .ticket-form { display: none; }
+  .ticket.is-submitted .success { display: flex; }
+
+  .success .stamp-mark {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--stub-bg);
+    transform: rotate(-4deg);
+    display: inline-block;
+  }
+
+  /* ---------- Sections ---------- */
+
+  section.page { padding-block: clamp(3.5rem, 8vw, 5.5rem); }
+
+  .section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .section-head h2 {
+    font-size: clamp(1.7rem, 3.4vw, 2.35rem);
+    max-width: 20ch;
+  }
+
+  .section-kicker {
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink-soft);
+    margin: 0 0 0.5rem;
+  }
+
+  .section-sub {
+    max-width: 38ch;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    gap: 1.1rem;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    padding: 1.5rem 1.4rem;
+    display: grid;
+    gap: 0.7rem;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .card.in-view { opacity: 1; transform: translateY(0); }
+
+  .card-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: var(--surface-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+
+  .card h3 {
+    font-size: 1.08rem;
+    line-height: 1.35;
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  /* ---------- Partner section ---------- */
+
+  .partners {
+    background: var(--surface-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .founder-box {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--stamp);
+    border-radius: 0.7rem;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: clamp(1.75rem, 4vw, 2.25rem);
+  }
+
+  .founder-box .stamp-mark {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: var(--stamp);
+    transform: rotate(-3deg);
+    flex: 0 0 auto;
+  }
+
+  .founder-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .founder-box strong { color: var(--ink); }
+
+  /* ---------- Footer ---------- */
+
+  footer.page {
+    padding-block: clamp(3rem, 6vw, 4rem);
+  }
+
+  footer.page .foot-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  footer.page .foot-note {
+    max-width: 34ch;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  footer.page .foot-links {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  footer.page .foot-links a { text-decoration: underline; text-underline-offset: 3px; }
+
+  footer.page .foot-bottom {
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-family: "Space Mono", monospace;
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card { opacity: 1; transform: none; transition: none; }
+    .ticket button { transition: none; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="logo">HeuteHier <span class="place">Bebra</span></div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow"><span class="dot"></span>Kommt bald nach Bebra</span>
+    <h1 class="headline chalk">Was geht<br>heute in <span class="accent-word">Bebra</span>?</h1>
+    <p class="lede">
+      Schluss mit langem Suchen. HeuteHier zeigt dir tagesaktuelle Gastro-Deals, spontane
+      Freizeit-Treffs und Mitfahrgelegenheiten in deiner direkten Umgebung. Genau jetzt.
+    </p>
+
+    <div class="ticket" id="ticket">
+      <div class="ticket-stub"><span>6 Monate gratis</span></div>
+      <div class="ticket-main">
+        <form class="ticket-form" id="signup-form">
+          <p class="ticket-title">Warteliste &middot; Start Bebra</p>
+          <div class="ticket-row">
+            <label for="email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
+              Deine E-Mail-Adresse
+            </label>
+            <input id="email" type="email" required placeholder="deine@email.de" autocomplete="email">
+            <button type="submit">Ich will dabei sein!</button>
+          </div>
+          <p class="fineprint">Kostenlos &amp; unverbindlich &middot; kein Spam, versprochen.</p>
+        </form>
+        <div class="success">
+          <span class="stamp-mark">Notiert!</span>
+          <p class="fineprint">Wir melden uns, sobald es in Bebra losgeht.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-kicker">Für dich</p>
+        <h2>Drei Gründe, heute reinzuschauen</h2>
+      </div>
+      <p class="section-sub">Kein Konto nötig, um zu stöbern &ndash; erst beim Speichern oder Kontaktieren fragen wir nach einem Login.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">🍔</div>
+        <h3>Nie wieder Schnitzel-Deals verpassen</h3>
+        <p>Siehst du die handgeschriebene Tageskarte des Gasthofs um die Ecke? Ab jetzt ja. Wähle dein Gericht und finde den besten Preis für heute.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">🏃</div>
+        <h3>Spontan nie mehr allein</h3>
+        <p>Lust auf eine Laufrunde um den Breitenbacher See oder einen Spieleabend, aber niemand hat Zeit? Finde Gleichgesinnte in Bebra, die genau jetzt das Gleiche vorhaben.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">🚗</div>
+        <h3>Schnell von A nach B</h3>
+        <p>Schau kurz in die App und finde jemanden, der heute oder morgen nach Kassel oder Bad Hersfeld fährt und noch einen Platz frei hat.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="page partners">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-kicker">Für Gastronomen &amp; Händler</p>
+        <h2>Wir nehmen dir die Arbeit komplett ab</h2>
+      </div>
+      <p class="section-sub">Größtes Hindernis im Alltag ist die Zeit &ndash; deshalb übernehmen wir für dich, was geht.</p>
+    </div>
+
+    <div class="founder-box">
+      <span class="stamp-mark">Gründungsmitglied</span>
+      <p>
+        Die ersten <strong>50 Partner in und um Bebra</strong> erhalten das Basis-Abo
+        <strong>lebenslang kostenlos</strong> &ndash; und wir legen dein Profil beim
+        persönlichen Onboarding-Besuch direkt für dich an.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">📸</div>
+        <h3>Tagesgerichte blitzschnell online</h3>
+        <p>Schieß morgens einfach ein Foto deiner Kreidetafel. Unsere KI liest die Gerichte aus und stellt dein Angebot sofort online &ndash; kein Formular, kein Tippen.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">👥</div>
+        <h3>Neue Kunden aus der Region</h3>
+        <p>Erreiche genau die Menschen in und um Bebra, die in diesem Moment Hunger haben und nach deinem Angebot suchen.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="page">
+  <div class="wrap">
+    <div class="foot-top">
+      <p class="foot-note">
+        Wir entwickeln HeuteHier gerade mit viel Herzblut für Bebra. Trag dich oben ein,
+        und wir informieren dich exklusiv, sobald die App verfügbar ist. Kein Spam, versprochen!
+      </p>
+      <div class="foot-links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>HEUTEHIER &middot; ENTWURF</span>
+      <span>GEMACHT FÜR BEBRA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById('signup-form');
+    var ticket = document.getElementById('ticket');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      ticket.classList.add('is-submitted');
+    });
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.card').forEach(function (card, i) {
+        card.style.transitionDelay = (i % 3) * 90 + 'ms';
+        observer.observe(card);
+      });
+    } else {
+      document.querySelectorAll('.card').forEach(function (card) {
+        card.classList.add('in-view');
+      });
+    }
+  })();
+</script>
