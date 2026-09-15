@@ -282,47 +282,54 @@
     color: var(--ticket-ink-soft);
   }
 
-  .ticket-region {
+  .ticket-city {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.6rem;
     flex-wrap: wrap;
   }
 
-  .region-pill {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
+  .city-select {
+    font: inherit;
     font-family: "Space Mono", monospace;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    color: var(--ticket-ink-soft);
+    color: var(--ticket-ink);
     background: #fff;
     border: 1px solid var(--ticket-line);
-    border-radius: 999px;
-    padding: 0.42rem 0.8rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.65rem;
     cursor: pointer;
-    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
 
-  .region-pill input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .region-pill:has(input:checked) {
-    background: var(--accent);
-    color: var(--accent-ink);
-    border-color: var(--accent);
-  }
-
-  .region-pill:has(input:focus-visible) {
+  .city-select:focus-visible {
     outline: 2px solid var(--stub-bg);
     outline-offset: 2px;
+  }
+
+  .region-arrow {
+    color: var(--ticket-ink-soft);
+    font-size: 0.85rem;
+  }
+
+  .region-auto {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: "Space Mono", monospace;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ticket-ink-soft);
+    background: var(--surface-alt);
+    border: 1px dashed var(--ticket-line);
+    border-radius: 999px;
+    padding: 0.32rem 0.6rem 0.3rem;
+  }
+
+  .region-auto strong {
+    color: var(--ticket-ink);
+    font-weight: 700;
   }
 
   .ticket-row {
@@ -614,15 +621,15 @@
       <div class="ticket-main">
         <form class="ticket-form" id="signup-form">
           <p class="ticket-title">Warteliste &middot; Stadt &amp; Region</p>
-          <div class="ticket-region" role="radiogroup" aria-label="Deine Region">
-            <label class="region-pill">
-              <input type="radio" name="region" value="Stadt Bebra" checked>
-              Stadt Bebra
+          <div class="ticket-city">
+            <label for="city-select" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
+              Deine Stadt
             </label>
-            <label class="region-pill">
-              <input type="radio" name="region" value="Region Waldhessen">
-              Region Waldhessen
-            </label>
+            <select id="city-select" class="city-select" name="city">
+              <option value="Bebra" data-region="Waldhessen">Stadt Bebra</option>
+            </select>
+            <span class="region-arrow" aria-hidden="true">&rarr;</span>
+            <span class="region-auto">Region <strong id="region-value">Waldhessen</strong></span>
           </div>
           <div class="ticket-row">
             <label for="email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
@@ -635,7 +642,7 @@
         </form>
         <div class="success">
           <span class="stamp-mark">Notiert!</span>
-          <p class="fineprint">Wir melden uns, sobald es in <span id="region-echo">Bebra</span> losgeht.</p>
+          <p class="fineprint">Wir melden uns, sobald es in <span id="city-echo">Bebra</span> losgeht &ndash; Region <span id="region-echo">Waldhessen</span>.</p>
         </div>
       </div>
     </div>
@@ -743,13 +750,24 @@
   (function () {
     var form = document.getElementById('signup-form');
     var ticket = document.getElementById('ticket');
+    var citySelect = document.getElementById('city-select');
+    var regionValue = document.getElementById('region-value');
+    var cityEcho = document.getElementById('city-echo');
     var regionEcho = document.getElementById('region-echo');
+
+    function currentRegion() {
+      var option = citySelect.options[citySelect.selectedIndex];
+      return option ? option.getAttribute('data-region') : '';
+    }
+
+    citySelect.addEventListener('change', function () {
+      regionValue.textContent = currentRegion();
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var region = form.querySelector('input[name="region"]:checked');
-      if (region && regionEcho) {
-        regionEcho.textContent = region.value === 'Region Waldhessen' ? 'der Region Waldhessen' : 'Bebra';
-      }
+      if (cityEcho) { cityEcho.textContent = citySelect.value; }
+      if (regionEcho) { regionEcho.textContent = currentRegion(); }
       ticket.classList.add('is-submitted');
     });
 
