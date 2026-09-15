@@ -404,6 +404,12 @@
 
   .card.in-view { opacity: 1; transform: translateY(0); }
 
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
   .card-icon {
     width: 2.6rem;
     height: 2.6rem;
@@ -413,6 +419,19 @@
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
+    flex: 0 0 auto;
+  }
+
+  .card-tag {
+    font-family: "Space Mono", monospace;
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-strong, var(--accent));
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.22rem 0.55rem;
   }
 
   .card h3 {
@@ -582,17 +601,26 @@
 
     <div class="cards">
       <article class="card">
-        <div class="card-icon" aria-hidden="true">🍔</div>
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">🍔</div>
+          <span class="card-tag">JetzoDeals</span>
+        </div>
         <h3>Nie wieder Schnitzel-Deals verpassen</h3>
         <p>Siehst du die handgeschriebene Tageskarte des Gasthofs um die Ecke? Ab jetzt ja. Wähle dein Gericht und finde den besten Preis für heute.</p>
       </article>
       <article class="card">
-        <div class="card-icon" aria-hidden="true">🏃</div>
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">🏃</div>
+          <span class="card-tag">JetzoSport &middot; JetzoTreffen</span>
+        </div>
         <h3>Spontan nie mehr allein</h3>
         <p>Lust auf eine Laufrunde um den Breitenbacher See oder einen Spieleabend, aber niemand hat Zeit? Finde Gleichgesinnte in Bebra, die genau jetzt das Gleiche vorhaben.</p>
       </article>
       <article class="card">
-        <div class="card-icon" aria-hidden="true">🚗</div>
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">🚗</div>
+          <span class="card-tag">JetzoMitfahren</span>
+        </div>
         <h3>Schnell von A nach B</h3>
         <p>Schau kurz in die App und finde jemanden, der heute oder morgen nach Kassel oder Bad Hersfeld fährt und noch einen Platz frei hat.</p>
       </article>
@@ -621,12 +649,17 @@
 
     <div class="cards">
       <article class="card">
-        <div class="card-icon" aria-hidden="true">📸</div>
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">📸</div>
+          <span class="card-tag">JetzoDeals</span>
+        </div>
         <h3>Tagesgerichte blitzschnell online</h3>
         <p>Schieß morgens einfach ein Foto deiner Kreidetafel. Unsere KI liest die Gerichte aus und stellt dein Angebot sofort online &ndash; kein Formular, kein Tippen.</p>
       </article>
       <article class="card">
-        <div class="card-icon" aria-hidden="true">👥</div>
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">👥</div>
+        </div>
         <h3>Neue Kunden aus der Region</h3>
         <p>Erreiche genau die Menschen in und um Bebra, die in diesem Moment Hunger haben und nach deinem Angebot suchen.</p>
       </article>
