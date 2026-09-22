@@ -466,6 +466,12 @@
     padding: 1.5rem 1.4rem;
     display: grid;
     gap: 0.7rem;
+  }
+
+  /* Cards are visible by default (safe if JS never runs). Only when
+     JS confirms it's active do they start hidden for the scroll-in
+     effect below. */
+  .js-ready .card {
     opacity: 0;
     transform: translateY(14px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -826,6 +832,8 @@
 
 <script>
   (function () {
+    document.documentElement.classList.add('js-ready');
+
     var form = document.getElementById('signup-form');
     var ticket = document.getElementById('ticket');
     var citySelect = document.getElementById('city-select');
