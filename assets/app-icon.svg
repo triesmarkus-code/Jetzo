@@ -1,9 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-  <rect width="1024" height="1024" fill="#232C26" />
-  <g transform="translate(176,176) scale(28)">
-    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#D97F2A" />
+  <rect width="1024" height="1024" fill="#1F3A5C" />
+  <g transform="translate(512,512) scale(6.8)">
+    <circle r="50" fill="#68A6DE" stroke="#F4F1EA" stroke-width="5" />
+    <path d="M -34 -24 Q -18 -37 -6 -27 Q 6 -38 21 -30 Q 34 -21 24 -6 Q 37 3 27 15 Q 34 27 18 30 Q 9 41 -6 33 Q -21 39 -30 24 Q -43 18 -37 3 Q -46 -9 -34 -24 Z"
+          fill="#78B36B" opacity="0.92" />
+    <ellipse cx="0" cy="0" rx="18" ry="50" fill="none" stroke="#F4F1EA" stroke-width="2.5" />
+    <ellipse cx="0" cy="0" rx="35" ry="50" fill="none" stroke="#F4F1EA" stroke-width="2.5" />
+    <line x1="-50" y1="0" x2="50" y2="0" stroke="#F4F1EA" stroke-width="2.5" />
+    <line x1="-47" y1="-21" x2="47" y2="-21" stroke="#F4F1EA" stroke-width="1.8" opacity="0.7" />
+    <line x1="-47" y1="21" x2="47" y2="21" stroke="#F4F1EA" stroke-width="1.8" opacity="0.7" />
+    <circle r="50" fill="none" stroke="#F4F1EA" stroke-width="5" />
+    <circle cx="-16" cy="-4" r="5.5" fill="#F4F1EA" />
+    <circle cx="16" cy="-4" r="5.5" fill="#F4F1EA" />
+    <path d="M -19 15 Q 0 32 19 15" stroke="#F4F1EA" stroke-width="5" fill="none" stroke-linecap="round" />
   </g>
-  <text x="512" y="454" text-anchor="middle" dominant-baseline="middle"
-        font-family="Helvetica, Arial, sans-serif" font-weight="700"
-        font-size="220" fill="#201404">J</text>
 </svg>

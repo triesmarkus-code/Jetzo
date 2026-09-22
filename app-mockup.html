@@ -155,14 +155,9 @@
   .app-logo {
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-family: "Caveat", cursive;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--app-header-ink);
   }
 
-  .app-logo svg { width: 24px; height: 24px; flex: 0 0 auto; }
+  .app-logo svg { width: 74px; height: auto; flex: 0 0 auto; }
 
   .icon-btn {
     width: 28px;
@@ -416,16 +411,30 @@
 
       <div class="app-nav">
         <div class="app-logo">
-          <svg viewBox="0 0 44 44" role="img" aria-label="Jetzo Logo">
-            <circle cx="17" cy="26" r="12" fill="none" stroke="var(--app-header-line)" stroke-width="1.3" />
-            <ellipse cx="17" cy="26" rx="5" ry="12" fill="none" stroke="var(--app-header-line)" stroke-width="1.1" />
-            <line x1="5" y1="26" x2="29" y2="26" stroke="var(--app-header-line)" stroke-width="1.1" />
-            <g transform="translate(13,0) scale(1.4)">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="var(--app-accent)" />
+          <svg viewBox="-40 -70 700 340" role="img" aria-label="Jetzo Logo">
+            <text x="20" y="215" font-size="220" font-family="'Caveat', cursive" font-weight="700" fill="#1F3A5C">Jetz</text>
+            <g transform="translate(432,168)">
+              <circle r="50" fill="#68A6DE" stroke="#1F3A5C" stroke-width="5" />
+              <path d="M -34 -24 Q -18 -37 -6 -27 Q 6 -38 21 -30 Q 34 -21 24 -6 Q 37 3 27 15 Q 34 27 18 30 Q 9 41 -6 33 Q -21 39 -30 24 Q -43 18 -37 3 Q -46 -9 -34 -24 Z"
+                    fill="#78B36B" opacity="0.92" />
+              <ellipse cx="0" cy="0" rx="18" ry="50" fill="none" stroke="#1F3A5C" stroke-width="2.5" />
+              <ellipse cx="0" cy="0" rx="35" ry="50" fill="none" stroke="#1F3A5C" stroke-width="2.5" />
+              <line x1="-50" y1="0" x2="50" y2="0" stroke="#1F3A5C" stroke-width="2.5" />
+              <line x1="-47" y1="-21" x2="47" y2="-21" stroke="#1F3A5C" stroke-width="1.8" opacity="0.7" />
+              <line x1="-47" y1="21" x2="47" y2="21" stroke="#1F3A5C" stroke-width="1.8" opacity="0.7" />
+              <circle r="50" fill="none" stroke="#1F3A5C" stroke-width="5" />
+              <circle cx="-16" cy="-4" r="5.5" fill="#1F3A5C" />
+              <circle cx="16" cy="-4" r="5.5" fill="#1F3A5C" />
+              <path d="M -19 15 Q 0 32 19 15" stroke="#1F3A5C" stroke-width="5" fill="none" stroke-linecap="round" />
             </g>
-            <text x="29.8" y="13" text-anchor="middle" font-family="'Space Mono', monospace" font-weight="700" font-size="11.5" fill="var(--app-accent-ink)">J</text>
+            <text x="358" y="95" font-size="110" font-family="'Caveat', cursive" font-weight="700" fill="#EAA53A">?</text>
+            <text x="495" y="82" font-size="100" font-family="'Caveat', cursive" font-weight="700" fill="#D2542E">!</text>
+            <g stroke-linecap="round" fill="none">
+              <path d="M 342 68 L 325 47" stroke="#EAA53A" stroke-width="7" />
+              <path d="M 555 110 L 534 121" stroke="#EAA53A" stroke-width="7" />
+              <path d="M 558 145 L 535 149" stroke="#D2542E" stroke-width="7" />
+            </g>
           </svg>
-          Jetzo
         </div>
         <div class="nav-icons">
           <span class="icon-btn" aria-hidden="true">&#9825;</span>
