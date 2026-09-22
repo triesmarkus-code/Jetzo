@@ -112,6 +112,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 0.6rem;
     padding-block: 1.1rem;
     gap: 1rem;
   }
@@ -310,7 +312,8 @@
 
   .ticket-main {
     flex: 1 1 auto;
-    padding: 1.4rem 1.5rem 1.3rem;
+    min-width: 0;
+    padding: 1.4rem clamp(1rem, 4vw, 1.5rem) 1.3rem;
     border-left: 1px dashed var(--ticket-line);
     display: grid;
     gap: 0.7rem;
@@ -531,7 +534,8 @@
 
   .founder-box {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
     align-items: flex-start;
     background: var(--surface);
     border: 1px solid var(--line);
@@ -551,6 +555,7 @@
   }
 
   .founder-box p {
+    flex: 1 1 12rem;
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.55;
