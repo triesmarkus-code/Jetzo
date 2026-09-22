@@ -193,38 +193,76 @@
   }
 
   .header-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 0 16px 14px;
+  }
+
+  .range-field {
+    display: grid;
+    gap: 5px;
+  }
+
+  .range-top {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0 16px 12px;
-  }
-
-  .city-toggle {
-    display: inline-flex;
-    background: rgba(245, 240, 227, 0.07);
-    border: 1px solid var(--app-header-line);
-    border-radius: 999px;
-    padding: 3px;
+    align-items: baseline;
+    justify-content: space-between;
     font-family: "Space Mono", monospace;
-    font-size: 0.64rem;
-    font-weight: 700;
-  }
-
-  .city-toggle button {
-    border: none;
-    background: transparent;
-    color: var(--app-header-ink-soft);
-    padding: 5px 10px;
-    border-radius: 999px;
-    cursor: pointer;
-    font: inherit;
+    font-size: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
+    color: var(--app-header-ink-soft);
   }
 
-  .city-toggle button.active {
+  .range-top strong {
+    font-size: 0.68rem;
+    color: var(--app-header-ink);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .range-field input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(245, 240, 227, 0.18);
+    outline: none;
+    margin: 0;
+  }
+
+  .range-field input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 999px;
+    background: transparent;
+  }
+
+  .range-field input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    margin-top: -5.5px;
+    border-radius: 50%;
     background: var(--app-accent);
-    color: var(--app-accent-ink);
+    border: 2px solid var(--app-header-bg);
+    cursor: pointer;
+  }
+
+  .range-field input[type="range"]::-moz-range-track {
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(245, 240, 227, 0.18);
+  }
+
+  .range-field input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--app-accent);
+    border: 2px solid var(--app-header-bg);
+    cursor: pointer;
   }
 
   .chips-row {
@@ -401,18 +439,23 @@
       </div>
 
       <div class="header-row-2">
-        <div class="city-toggle" role="radiogroup" aria-label="Stadt oder Region">
-          <button type="button" class="active" data-city="bebra">Bebra</button>
-          <button type="button" data-city="waldhessen">Waldhessen</button>
+        <div class="range-field">
+          <div class="range-top">Radius <strong id="radius-value">15 km</strong></div>
+          <input type="range" id="radius-range" min="1" max="50" value="15" aria-label="Radius in Kilometern">
+        </div>
+        <div class="range-field">
+          <div class="range-top">Zeitraum <strong id="days-value">Heute</strong></div>
+          <input type="range" id="days-range" min="0" max="30" value="0" aria-label="Zeitfenster in Tagen">
         </div>
       </div>
 
       <div class="chips-row" role="radiogroup" aria-label="Kategorie">
         <span class="chip active" data-filter="all">Alle</span>
         <span class="chip" data-filter="essen">&#127828; Essen</span>
-        <span class="chip" data-filter="sport">&#127939; Sport</span>
-        <span class="chip" data-filter="mitfahren">&#128663; Mitfahren</span>
-        <span class="chip" data-filter="shoppen">&#128717; Shoppen</span>
+        <span class="chip" data-filter="trinken">&#127864; Trinken</span>
+        <span class="chip" data-filter="shopping">&#128717; Shopping</span>
+        <span class="chip" data-filter="freizeit">&#127905; Freizeitaktivitäten</span>
+        <span class="chip" data-filter="veranstaltungen">&#127881; Veranstaltungen</span>
       </div>
     </div>
 
@@ -429,7 +472,7 @@
         </div>
       </article>
 
-      <article class="app-card" data-category="essen">
+      <article class="app-card" data-category="trinken">
         <div class="card-photo" style="background:linear-gradient(135deg,#D97F2A,#7A2A1E);">
           <span class="card-emoji">&#127864;</span>
           <button class="save-btn" aria-label="Merken">&#9825;</button>
@@ -441,7 +484,7 @@
         </div>
       </article>
 
-      <article class="app-card" data-category="sport">
+      <article class="app-card" data-category="freizeit">
         <div class="card-photo" style="background:linear-gradient(135deg,#3B473D,#1A211C);">
           <span class="card-emoji">&#127939;</span>
           <button class="save-btn" aria-label="Merken">&#9825;</button>
@@ -453,19 +496,19 @@
         </div>
       </article>
 
-      <article class="app-card" data-category="mitfahren">
-        <div class="card-photo" style="background:linear-gradient(135deg,#4A4436,#232C26);">
-          <span class="card-emoji">&#128663;</span>
+      <article class="app-card" data-category="veranstaltungen">
+        <div class="card-photo" style="background:linear-gradient(135deg,#A83526,#232C26);">
+          <span class="card-emoji">&#127881;</span>
           <button class="save-btn" aria-label="Merken">&#9825;</button>
         </div>
         <div class="card-body">
-          <p class="card-meta">Morgen 07:30 Uhr &middot; Region Waldhessen</p>
-          <h3>Fahrt nach Bad Hersfeld</h3>
-          <p class="card-foot"><span class="status-chip">2 Pl&auml;tze frei</span></p>
+          <p class="card-meta">Innenstadt Rotenburg &middot; Region Waldhessen</p>
+          <h3>Kirmes in Rotenburg &ndash; heute ab 18 Uhr</h3>
+          <p class="card-foot"><span class="status-chip">Live-Musik ab 20 Uhr</span></p>
         </div>
       </article>
 
-      <article class="app-card" data-category="shoppen">
+      <article class="app-card" data-category="shopping">
         <div class="card-photo" style="background:linear-gradient(135deg,#C97323,#7A2A1E);">
           <span class="card-emoji">&#128717;</span>
           <button class="save-btn" aria-label="Merken">&#9825;</button>
@@ -498,12 +541,17 @@
       });
     });
 
-    var cityButtons = document.querySelectorAll('.city-toggle button');
-    cityButtons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        cityButtons.forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-      });
+    var radiusRange = document.getElementById('radius-range');
+    var radiusValue = document.getElementById('radius-value');
+    radiusRange.addEventListener('input', function () {
+      radiusValue.textContent = radiusRange.value + ' km';
+    });
+
+    var daysRange = document.getElementById('days-range');
+    var daysValue = document.getElementById('days-value');
+    daysRange.addEventListener('input', function () {
+      var d = parseInt(daysRange.value, 10);
+      daysValue.textContent = d === 0 ? 'Heute' : '+' + d + (d === 1 ? ' Tag' : ' Tage');
     });
   })();
 </script>

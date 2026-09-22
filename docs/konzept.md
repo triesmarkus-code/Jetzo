@@ -6,16 +6,16 @@ Arbeitstitel: **Jetzo**. Lokale App für tagesaktuelle Angebote und spontane Akt
 
 „Was geht heute in Bebra?“ – Eine App, die tagesaktuelle Gastro-Deals, Shopping-Rabatte, spontane Freizeit-Treffs, Mitfahrgelegenheiten und Nachbarschaftshilfe an einem Ort bündelt, gefiltert nach Stadt/Region und Kategorie.
 
-## Geografisches Konzept: Stadt & Region
+## Geografisches Konzept: Radius & Zeitfenster
 
-Statt eines Kilometer-Radius arbeitet Jetzo mit zwei festen Ebenen:
+Der App-Feed filtert **nicht** über feste Stadt-/Regionsgrenzen, sondern über zwei frei einstellbare Regler auf der Startseite:
 
-- **Stadt Bebra**: Die Standard-Ansicht beim Öffnen der App – tagesaktuelle Gastro-Deals, Shopping-Rabatte und spontane Treffs direkt vor Ort.
-- **Region Waldhessen**: Ein Umschalter erweitert die Ansicht auf die Region – sinnvoll für Mitfahrgelegenheiten, überregionale Events (JetzoLive) und Sportgruppen, die auch außerhalb der Stadtgrenze Teilnehmer suchen.
+- **Radius-Regler**: Umkreis frei wählbar (z. B. 1–50 km) statt fester Stadt-/Regionsstufen.
+- **Zeitfenster-Regler**: Standard ist „Heute", per Regler in Tagesschritten bis zu **+30 Tage** erweiterbar – zeigt so auch kommende Events oder Wochenendangebote, nicht nur tagesaktuelle Deals.
 
-Vorteil gegenüber einem Radius-Schieberegler: klarere Erwartung ("Das ist meine Stadt" vs. "Das ist meine Region"), einfacher zu kommunizieren an Partner und Nutzer, und die Ebenen lassen sich unabhängig von GPS-Genauigkeit pflegen.
+Vorteil gegenüber einem festen Stadt/Region-Umschalter: volle Kontrolle für den Nutzer, ein Regler deckt sowohl den kleinen Gastro-Radius für heute als auch das Konzert in drei Wochen im 40-km-Umkreis ab – ohne dass Stadtgrenzen gepflegt werden müssen.
 
-**Städte in Region Waldhessen** (alle 20 Städte & Gemeinden im Landkreis Hersfeld-Rotenburg): Alheim, Bad Hersfeld, **Bebra** (Pilot-Testmarkt), Breitenbach am Herzberg, Cornberg, Friedewald, Hauneck, Haunetal, Heringen (Werra), Hohenroda, Kirchheim, Ludwigsau, Nentershausen, Neuenstein, Niederaula, Philippsthal (Werra), Ronshausen, Rotenburg an der Fulda, Schenklengsfeld, Wildeck. Die Warteliste auf der Landingpage erlaubt die Anmeldung aus allen 20 Städten, zusätzlich wählt man dort, ob man sich als Händler oder Privatperson einträgt. Der Wirte-Vertrieb (Gründungsmitglieder-Aktion) startet trotzdem zunächst konzentriert in Bebra.
+**Städte in Region Waldhessen** (alle 20 Städte & Gemeinden im Landkreis Hersfeld-Rotenburg): Alheim, Bad Hersfeld, **Bebra** (Pilot-Testmarkt), Breitenbach am Herzberg, Cornberg, Friedewald, Hauneck, Haunetal, Heringen (Werra), Hohenroda, Kirchheim, Ludwigsau, Nentershausen, Neuenstein, Niederaula, Philippsthal (Werra), Ronshausen, Rotenburg an der Fulda, Schenklengsfeld, Wildeck. Diese Liste bleibt für die **Warteliste auf der Landingpage** relevant (dort meldet man sich mit einer festen Stadt und als Händler oder Privatperson an) – im App-Feed selbst gilt ab jetzt aber Radius statt Stadtgrenze.
 
 ## KI-Unterstützung für Wirte
 
@@ -61,7 +61,7 @@ Größtes Hindernis: Zeitmangel der Wirte. Devise: **„Wir nehmen dir die Arbei
 Prinzip: **Erst filtern, dann entdecken.**
 
 - **Header**: Logo „Jetzo“ links, Profil-Icon + Herz-Icon (Favoriten) rechts. Darunter fixe Suchleiste: „Was suchst du heute? (z. B. Schnitzel, Joggen)“.
-- **Filter-Leiste**: Umschalter **Stadt Bebra / Region Waldhessen** (statt Kilometer-Radius), darunter horizontal scrollbares Band mit runden Kategorie-Icons (🍔 Essen, 🏃 Sport, 🚗 Mitfahren, 🛍️ Shoppen) – Tippen filtert sofort.
+- **Filter-Leiste**: zwei Regler nebeneinander – **Radius** (1–50 km) und **Zeitfenster** (Heute bis +30 Tage) –, darunter horizontal scrollbares Band mit runden Kategorie-Icons (🍔 Essen, 🍹 Trinken, 🛍️ Shopping, 🎡 Freizeitaktivitäten, 🎉 Veranstaltungen) – Tippen filtert sofort.
 - **Feed / Hauptbereich**: Angebote als Karten mit großem Bild, fetter Überschrift (z. B. „Knuspriges XXL-Schnitzel für 12,- €“), Entfernungsangabe (z. B. „350 m entfernt“), Herz-Symbol oben rechts zum Speichern.
 
 ## Login & Favoriten
