@@ -15,7 +15,7 @@ Statt eines Kilometer-Radius arbeitet Jetzo mit zwei festen Ebenen:
 
 Vorteil gegenüber einem Radius-Schieberegler: klarere Erwartung ("Das ist meine Stadt" vs. "Das ist meine Region"), einfacher zu kommunizieren an Partner und Nutzer, und die Ebenen lassen sich unabhängig von GPS-Genauigkeit pflegen.
 
-**Städte in Region Waldhessen** (Landkreis Hersfeld-Rotenburg): Bad Hersfeld, **Bebra** (Pilot-Testmarkt), Rotenburg an der Fulda, Heringen (Werra). Die Warteliste auf der Landingpage erlaubt bereits die Anmeldung aus allen vier Städten – die Region wird dabei automatisch aus der gewählten Stadt abgeleitet. Der Wirte-Vertrieb (Gründungsmitglieder-Aktion) startet trotzdem zunächst konzentriert in Bebra.
+**Städte in Region Waldhessen** (alle 20 Städte & Gemeinden im Landkreis Hersfeld-Rotenburg): Alheim, Bad Hersfeld, **Bebra** (Pilot-Testmarkt), Breitenbach am Herzberg, Cornberg, Friedewald, Hauneck, Haunetal, Heringen (Werra), Hohenroda, Kirchheim, Ludwigsau, Nentershausen, Neuenstein, Niederaula, Philippsthal (Werra), Ronshausen, Rotenburg an der Fulda, Schenklengsfeld, Wildeck. Die Warteliste auf der Landingpage erlaubt die Anmeldung aus allen 20 Städten, zusätzlich wählt man dort, ob man sich als Händler oder Privatperson einträgt. Der Wirte-Vertrieb (Gründungsmitglieder-Aktion) startet trotzdem zunächst konzentriert in Bebra.
 
 ## KI-Unterstützung für Wirte
 

@@ -241,6 +241,14 @@
     line-height: 1.55;
   }
 
+  .lede-sub {
+    max-width: 44ch;
+    font-size: 0.98rem;
+    color: var(--hero-ink-soft);
+    line-height: 1.6;
+    margin-top: -1rem;
+  }
+
   /* ---------- Ticket / signup ---------- */
 
   .ticket {
@@ -310,11 +318,13 @@
   .ticket-city {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
   }
 
   .city-select {
+    flex: 1 1 10rem;
+    min-width: 0;
     font: inherit;
     font-family: "Space Mono", monospace;
     font-size: 0.8rem;
@@ -330,31 +340,6 @@
   .city-select:focus-visible {
     outline: 2px solid var(--stub-bg);
     outline-offset: 2px;
-  }
-
-  .region-arrow {
-    color: var(--ticket-ink-soft);
-    font-size: 0.85rem;
-  }
-
-  .region-auto {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-family: "Space Mono", monospace;
-    font-size: 0.66rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--ticket-ink-soft);
-    background: var(--surface-alt);
-    border: 1px dashed var(--ticket-line);
-    border-radius: 999px;
-    padding: 0.32rem 0.6rem 0.3rem;
-  }
-
-  .region-auto strong {
-    color: var(--ticket-ink);
-    font-weight: 700;
   }
 
   .ticket-row {
@@ -647,45 +632,73 @@
     <span class="eyebrow"><span class="dot"></span>Kommt bald: Stadt Bebra &amp; Region Waldhessen</span>
     <h1 class="headline chalk">Was geht&rsquo;n<br><span class="accent-word">Jetzo</span>-App?!</h1>
     <p class="lede">
-      Schluss mit langem Suchen. Jetzo zeigt dir tagesaktuelle Gastro-Deals in der Stadt
-      Bebra sowie spontane Freizeit-Treffs und Mitfahrgelegenheiten in der ganzen Region
+      Schluss mit langem Suchen. Jetzo zeigt dir tagesaktuelle Deals im Bereich Gastro und
+      Shopping sowie Veranstaltungen und Freizeitaktivitäten in Bebra und der ganzen Region
       Waldhessen. Genau jetzt.
+    </p>
+    <p class="lede-sub">
+      Um zu checken, ob ihr Bock darauf habt, gibt es hier eine Warteliste. Melde dich
+      kostenlos an und erfahre als erster, wenn wir online gehen. Die ersten 50
+      Händler-Partner erhalten das Basisabo lebenslang kostenlos. Für die Nutzer ist die App
+      so oder so kostenfrei. Jetzt in die Warteliste eintragen.
     </p>
 
     <div class="ticket" id="ticket">
-      <div class="ticket-stub"><span>6 Monate gratis</span></div>
-      <div class="ticket-main">
-        <form class="ticket-form" id="signup-form">
-          <p class="ticket-title">Warteliste &middot; Stadt &amp; Region</p>
-          <div class="ticket-city">
-            <label for="city-select" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
-              Deine Stadt
-            </label>
-            <select id="city-select" class="city-select" name="city">
-              <option value="Bebra" data-region="Waldhessen">Stadt Bebra</option>
-              <option value="Bad Hersfeld" data-region="Waldhessen">Bad Hersfeld</option>
-              <option value="Rotenburg an der Fulda" data-region="Waldhessen">Rotenburg an der Fulda</option>
-              <option value="Heringen (Werra)" data-region="Waldhessen">Heringen (Werra)</option>
-            </select>
-            <span class="region-arrow" aria-hidden="true">&rarr;</span>
-            <span class="region-auto">Region <strong id="region-value">Waldhessen</strong></span>
+        <div class="ticket-stub"><span>Für Händler 6 Monate Gratis</span></div>
+        <div class="ticket-main">
+          <form class="ticket-form" id="signup-form">
+            <p class="ticket-title">Warteliste Stadt Bebra und Waldhessen</p>
+            <div class="ticket-city">
+              <label for="city-select" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
+                Deine Stadt
+              </label>
+              <select id="city-select" class="city-select" name="city">
+                <option value="Alheim">Alheim</option>
+                <option value="Bad Hersfeld">Bad Hersfeld</option>
+                <option value="Bebra" selected>Bebra</option>
+                <option value="Breitenbach am Herzberg">Breitenbach am Herzberg</option>
+                <option value="Cornberg">Cornberg</option>
+                <option value="Friedewald">Friedewald</option>
+                <option value="Hauneck">Hauneck</option>
+                <option value="Haunetal">Haunetal</option>
+                <option value="Heringen (Werra)">Heringen (Werra)</option>
+                <option value="Hohenroda">Hohenroda</option>
+                <option value="Kirchheim">Kirchheim</option>
+                <option value="Ludwigsau">Ludwigsau</option>
+                <option value="Nentershausen">Nentershausen</option>
+                <option value="Neuenstein">Neuenstein</option>
+                <option value="Niederaula">Niederaula</option>
+                <option value="Philippsthal (Werra)">Philippsthal (Werra)</option>
+                <option value="Ronshausen">Ronshausen</option>
+                <option value="Rotenburg an der Fulda">Rotenburg an der Fulda</option>
+                <option value="Schenklengsfeld">Schenklengsfeld</option>
+                <option value="Wildeck">Wildeck</option>
+              </select>
+              <label for="role-select" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
+                Du bist
+              </label>
+              <select id="role-select" class="city-select" name="role" required>
+                <option value="" disabled selected>Ich bin&hellip;</option>
+                <option value="Händler">Händler</option>
+                <option value="Privat">Privat</option>
+              </select>
+            </div>
+            <div class="ticket-row">
+              <label for="email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
+                Deine E-Mail-Adresse
+              </label>
+              <input id="email" type="email" required placeholder="deine@email.de" autocomplete="email">
+              <button type="submit">Ich will dabei sein!</button>
+            </div>
+            <p class="fineprint">Kostenlos &amp; unverbindlich &middot; kein Spam, versprochen.</p>
+          </form>
+          <div class="success">
+            <span class="stamp-mark">Notiert!</span>
+            <p class="fineprint">Wir melden uns, sobald es in <span id="city-echo">Bebra</span> losgeht.</p>
           </div>
-          <div class="ticket-row">
-            <label for="email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
-              Deine E-Mail-Adresse
-            </label>
-            <input id="email" type="email" required placeholder="deine@email.de" autocomplete="email">
-            <button type="submit">Ich will dabei sein!</button>
-          </div>
-          <p class="fineprint">Kostenlos &amp; unverbindlich &middot; kein Spam, versprochen.</p>
-        </form>
-        <div class="success">
-          <span class="stamp-mark">Notiert!</span>
-          <p class="fineprint">Wir melden uns, sobald es in <span id="city-echo">Bebra</span> losgeht &ndash; Region <span id="region-echo">Waldhessen</span>.</p>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 <section class="page">
@@ -693,9 +706,8 @@
     <div class="section-head">
       <div>
         <p class="section-kicker">Für dich</p>
-        <h2>Drei Gründe, heute reinzuschauen</h2>
+        <h2>Vier Gründe, heute reinzuschauen</h2>
       </div>
-      <p class="section-sub">Kein Konto nötig, um zu stöbern &ndash; erst beim Speichern oder Kontaktieren fragen wir nach einem Login.</p>
     </div>
 
     <div class="cards">
@@ -705,23 +717,31 @@
           <span class="card-tag">JetzoDeals</span>
         </div>
         <h3>Nie wieder Schnitzel-Deals verpassen</h3>
-        <p>Siehst du die handgeschriebene Tageskarte des Gasthofs um die Ecke? Ab jetzt ja. Wähle dein Gericht und finde den besten Preis für heute.</p>
+        <p>Siehst du die handgeschriebene Tageskarte des Gasthofs um die Ecke? Ab jetzt ja. Wähle dein Gericht und finde den besten Preis für heute. Und die Speisekarte findest du auch direkt hier in der Jetzo-App.</p>
       </article>
       <article class="card">
         <div class="card-head">
-          <div class="card-icon" aria-hidden="true">🏃</div>
-          <span class="card-tag">JetzoSport &middot; JetzoTreffen</span>
+          <div class="card-icon" aria-hidden="true">🛍️</div>
+          <span class="card-tag">JetzoShopping</span>
         </div>
-        <h3>Spontan nie mehr allein</h3>
-        <p>Lust auf eine Laufrunde um den Breitenbacher See oder einen Spieleabend, aber niemand hat Zeit? Finde Gleichgesinnte in Bebra, die genau jetzt das Gleiche vorhaben.</p>
+        <h3>Welche Angebote hat mein Lieblingsladen?</h3>
+        <p>Erfahre sofort, wenn dein Lieblingsladen ein Tages- oder Wochenangebot hat. Mit Jetzo erfährst du nun als Erster, wenn im Schaufenster ein Sale-Schild hängt. Und wenn du in einer Region bist, wo du dich nicht auskennst, zeigt dir Jetzo auch, ob du deinen Lieblingsladen hier findest.</p>
       </article>
       <article class="card">
         <div class="card-head">
-          <div class="card-icon" aria-hidden="true">🚗</div>
-          <span class="card-tag">JetzoMitfahren</span>
+          <div class="card-icon" aria-hidden="true">🎉</div>
+          <span class="card-tag">JetzoVeranstaltungen</span>
         </div>
-        <h3>Schnell von A nach B</h3>
-        <p>Schau kurz in die App und finde jemanden, der heute oder morgen nach Kassel oder Bad Hersfeld fährt und noch einen Platz frei hat.</p>
+        <h3>Wo kann ich Jetzo feiern?</h3>
+        <p>Es ist immer viel los, aber eigentlich weiß keiner was genau. Von Party und Kirmes über Comedy und Shows bis hin zu Konzerten &ndash; überall ist was los. Mit Jetzo weißt du ganz genau, wo die nächste Kirmes ist oder du deine Lieblingsband live sehen kannst.</p>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <div class="card-icon" aria-hidden="true">🎡</div>
+          <span class="card-tag">JetzoFreizeit</span>
+        </div>
+        <h3>Langeweile war gestern</h3>
+        <p>Nichts los? Mit Jetzo ist das Geschichte! Welches Kino zeigt was, wo kann ich paddeln, Kart fahren, Lasertag spielen oder in den Kletterwald? An viele Dinge denkt man nicht oder weiß nicht einmal, dass es sie hier gibt. Jetzo zeigt dir genau diese Spots und natürlich auch, ob es besondere Tagesaktionen gibt.</p>
       </article>
     </div>
   </div>
@@ -762,15 +782,15 @@
           <div class="card-icon" aria-hidden="true">📸</div>
           <span class="card-tag">JetzoDeals</span>
         </div>
-        <h3>Tagesgerichte blitzschnell online</h3>
-        <p>Schieß morgens einfach ein Foto deiner Kreidetafel. Unsere KI liest die Gerichte aus und stellt dein Angebot sofort online &ndash; kein Formular, kein Tippen.</p>
+        <h3>Tagesangebot blitzschnell online</h3>
+        <p>Schieße morgens einfach ein Foto deiner Kreidetafel. Unsere KI liest die Deals aus und stellt dein Angebot sofort online &ndash; kein Formular, kein Tippen.</p>
       </article>
       <article class="card">
         <div class="card-head">
           <div class="card-icon" aria-hidden="true">👥</div>
         </div>
         <h3>Neue Kunden aus der Region</h3>
-        <p>Erreiche genau die Menschen in und um Bebra, die in diesem Moment Hunger haben und nach deinem Angebot suchen.</p>
+        <p>Erreiche genau die Menschen in und um Bebra, die in diesem Moment genau dich und/oder dein Angebot suchen.</p>
       </article>
     </div>
   </div>
@@ -790,7 +810,7 @@
     </div>
     <div class="foot-bottom">
       <span>JETZO &middot; ENTWURF</span>
-      <span>GEMACHT FÜR BEBRA</span>
+      <span>GEMACHT FÜR BEBRA UND WALDHESSEN</span>
     </div>
   </div>
 </footer>
@@ -800,23 +820,11 @@
     var form = document.getElementById('signup-form');
     var ticket = document.getElementById('ticket');
     var citySelect = document.getElementById('city-select');
-    var regionValue = document.getElementById('region-value');
     var cityEcho = document.getElementById('city-echo');
-    var regionEcho = document.getElementById('region-echo');
-
-    function currentRegion() {
-      var option = citySelect.options[citySelect.selectedIndex];
-      return option ? option.getAttribute('data-region') : '';
-    }
-
-    citySelect.addEventListener('change', function () {
-      regionValue.textContent = currentRegion();
-    });
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (cityEcho) { cityEcho.textContent = citySelect.value; }
-      if (regionEcho) { regionEcho.textContent = currentRegion(); }
       ticket.classList.add('is-submitted');
     });
 
