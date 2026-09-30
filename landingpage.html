@@ -731,7 +731,9 @@
               <label for="email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">
                 Deine E-Mail-Adresse
               </label>
-              <input id="email" type="email" required placeholder="deine@email.de" autocomplete="email">
+              <input id="email" type="email" required placeholder="deine@email.de" autocomplete="email"
+                     pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                     title="Bitte gib eine gültige E-Mail-Adresse ein (mit @ und Domain-Endung, z. B. name@beispiel.de).">
               <button type="submit">Ich will dabei sein!</button>
             </div>
             <p class="fineprint">Kostenlos &amp; unverbindlich &middot; kein Spam, versprochen.</p>
@@ -881,6 +883,14 @@
     var emailInput = document.getElementById('email');
     var cityEcho = document.getElementById('city-echo');
     var gform = document.getElementById('gform');
+
+    var emailErrorMsg = 'Bitte gib eine gültige E-Mail-Adresse ein (mit @ und Domain-Endung, z. B. name@beispiel.de).';
+    emailInput.addEventListener('invalid', function () {
+      emailInput.setCustomValidity(emailErrorMsg);
+    });
+    emailInput.addEventListener('input', function () {
+      emailInput.setCustomValidity('');
+    });
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
