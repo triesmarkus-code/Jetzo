@@ -742,6 +742,17 @@
           </div>
         </div>
       </div>
+
+      <!-- Sends the waitlist entry to the Google Form in the background (hidden iframe
+           target avoids a page navigation and sidesteps Google Forms' CORS restriction
+           on direct fetch/XHR submission). -->
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+      <form id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScpP_SO_L5xbypOk7q-oxbTGY4zZUyDQu6qxjPwi1I-vjEoxA/formResponse"
+            method="POST" target="hidden_iframe" style="display:none;">
+        <input type="text" name="entry.1199376374" id="gform-city">
+        <input type="text" name="entry.1241657015" id="gform-role">
+        <input type="text" name="entry.1820027413" id="gform-email">
+      </form>
     </div>
 </section>
 
@@ -866,11 +877,20 @@
     var form = document.getElementById('signup-form');
     var ticket = document.getElementById('ticket');
     var citySelect = document.getElementById('city-select');
+    var roleSelect = document.getElementById('role-select');
+    var emailInput = document.getElementById('email');
     var cityEcho = document.getElementById('city-echo');
+    var gform = document.getElementById('gform');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (cityEcho) { cityEcho.textContent = citySelect.value; }
+
+      document.getElementById('gform-city').value = citySelect.value;
+      document.getElementById('gform-role').value = roleSelect.value;
+      document.getElementById('gform-email').value = emailInput.value;
+      gform.submit();
+
       ticket.classList.add('is-submitted');
     });
 
